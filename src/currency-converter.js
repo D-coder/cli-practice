@@ -15,8 +15,15 @@
 
 // We will store each piece of information in a dedicated variable for later use.
 
+var amount = process.argv[2]; //amount in cad
+var initialCurrency = process.argv[3];
+var targetCurrency = process.argv[4]; //Final currency
 
+console.log('the amount is ',amount);
 
+console.log('the initialCurrency is ',initialCurrency);
+
+console.log('the target currency is ',targetCurrency);
 // --------------------------------------------------
 // Step 2: Validate user input
 // --------------------------------------------------
