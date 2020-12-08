@@ -8,6 +8,8 @@
 // differently. There are many paths and approaches that result in a perfectly
 // valid finished product.
 
+var { validateUserInput } = require('./validate-user-input');
+
 // --------------------------------------------------
 // Step 1: Capture user input
 // --------------------------------------------------
@@ -32,10 +34,7 @@ console.log('the target currency is ',targetCurrency);
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
-if(amount === undefined || initialCurrency === undefined || targetCurrency === undefined){
-    console.log('you forgot to provide one of the inputs')
-}
-
+validateUserInput(amount, initialCurrency, targetCurrency);
 // -------------------------------------------------- 
 // Step 3: Define currency conversion rates
 // --------------------------------------------------
