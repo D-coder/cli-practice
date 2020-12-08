@@ -9,6 +9,7 @@
 // valid finished product.
 
 var { validateUserInput } = require('./validate-user-input');
+var { getRate } = require('./get-Rate');
 
 // --------------------------------------------------
 // Step 1: Capture user input
@@ -88,7 +89,7 @@ console.log('The currencies provided are valid',initialCurrency, targetCurrency)
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
 
-var rate = rates[initialCurrency][targetCurrency];
+var rate = getRate(rates, initialCurrency, targetCurrency);
 console.log('the rate is: ', rate);
 var result = amount*rate;
 console.log('the amount is: ', result); 
