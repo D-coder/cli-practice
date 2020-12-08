@@ -69,7 +69,17 @@ console.log(rates[initialCurrency][targetCurrency]);
 // If the user supplies an invalid initial or target currency, display a meaningful
 // warning message and exit the program.
 
+if(rates[initialCurrency]===undefined){
+    console.log('The initial currency provided is not valid',initialCurrency); 
+    process.exit();
+}
 
+if(rates[initialCurrency]!==undefined && rates[initialCurrency][targetCurrency]===undefined){
+    console.log('The target currency provided is not valid',targetCurrency);
+    process.exit();
+}
+
+console.log('The currencies provided are valid',initialCurrency, targetCurrency)
 
 // --------------------------------------------------
 // Step 5: Perform conversion
