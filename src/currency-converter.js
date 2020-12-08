@@ -36,7 +36,7 @@ if(amount === undefined || initialCurrency === undefined || targetCurrency === u
     console.log('you forgot to provide one of the inputs')
 }
 
-// --------------------------------------------------
+// -------------------------------------------------- 
 // Step 3: Define currency conversion rates
 // --------------------------------------------------
 // Here we will define which currency conversions are supported, as well as the
@@ -48,7 +48,17 @@ if(amount === undefined || initialCurrency === undefined || targetCurrency === u
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
 
-
+var rates = {
+    USD:{
+        CAD: 2,
+    },
+    CAD: {
+        USD: 0.5,
+    },
+};
+console.log(rates);
+console.log(rates[initialCurrency]);
+console.log(rates[initialCurrency][targetCurrency]);
 
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
