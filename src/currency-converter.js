@@ -100,3 +100,9 @@ console.log('the amount is: ', result);
 
 // This message should also include the original amount and currency information
 // supplied by the user.
+console.log('the amount is ',amount);
+
+console.log('the initialCurrency is ',initialCurrency);
+
+console.log('the target currency is ',targetCurrency);
+console.log('the converted amount is: ', result); 
